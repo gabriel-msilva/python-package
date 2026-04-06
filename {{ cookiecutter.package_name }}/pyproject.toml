@@ -5,13 +5,15 @@ build-backend = "uv_build"
 [project]
 name = "{{ cookiecutter.package_name }}"
 version = "0.1.0"
-description = "{{ cookiecutter.description }} "
+description = "{{ cookiecutter.description.strip() }}"
 readme = "README.md"
-authors = [
-    { name = "{{ cookiecutter.author_name }}", email = "{{ cookiecutter.author_email }}" },
-]
+authors = [{ name = "{{ cookiecutter.author_name.strip() }}", email = "{{ cookiecutter.author_email }}" }]
 requires-python = ">={{ cookiecutter.python_version }}"
 dependencies = []
 
 [project.scripts]
 package-name = "{{ cookiecutter.import_name }}:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-v"

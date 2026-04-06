@@ -10,7 +10,3 @@ tests:
 .PHONY: pre-commit
 pre-commit:
 	uv run pre-commit run --all-files
-
-.PHONY: cookiecutter
-cookiecutter:
-	uv run --no-dev cookiecutter .
