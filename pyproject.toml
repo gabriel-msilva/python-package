@@ -3,15 +3,13 @@ name = "python-package"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-authors = [
-    { name = "Gabriel Mello Silva", email = "gabriel-melloc@proton.me" }
-]
+authors = [{ name = "Gabriel Mello Silva", email = "gabriel-melloc@proton.me" }]
 requires-python = ">=3.11"
-dependencies = []
+dependencies = ["cookiecutter>=2"]
 
-[project.scripts]
-python-package = "python_package:main"
+[dependency-groups]
+dev = ["pytest==9.0.2"]
 
-[build-system]
-requires = ["uv_build>=0.9.25,<0.10.0"]
-build-backend = "uv_build"
+[tool.uv]
+package = true
+resolution = "lowest-direct"
