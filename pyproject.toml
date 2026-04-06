@@ -1,0 +1,17 @@
+[project]
+name = "python-package"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Gabriel Mello Silva", email = "gabriel-melloc@proton.me" }
+]
+requires-python = ">=3.11"
+dependencies = []
+
+[project.scripts]
+python-package = "python_package:main"
+
+[build-system]
+requires = ["uv_build>=0.9.25,<0.10.0"]
+build-backend = "uv_build"
