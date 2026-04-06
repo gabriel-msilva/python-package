@@ -1,6 +1,10 @@
 import pytest
 
-from hooks.pre_gen_project import validate_package_name, validate_email
+from hooks.pre_gen_project import (
+    validate_package_name,
+    validate_email,
+    validate_python_version,
+)
 
 
 @pytest.mark.parametrize(
@@ -86,3 +90,14 @@ def test_valid_email_pass(email):
 def test_invalid_email_exits(email):
     with pytest.raises(SystemExit):
         validate_email(email)
+
+
+@pytest.mark.parametrize("version", ["3.9", "3.11"])
+def test_valid_python_version_pass(version):
+    validate_python_version(version)
+
+
+@pytest.mark.parametrize("version", ["2.7", "3", "3.9.1", "python3.9"])
+def test_invalid_python_version_exits(version):
+    with pytest.raises(SystemExit):
+        validate_python_version(version)

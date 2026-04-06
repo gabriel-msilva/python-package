@@ -3,5 +3,6 @@
     "import_name": "{{ cookiecutter.package_name.replace('-', '_') }}",
     "description": null,
     "author_name": null,
-    "author_email": null
+    "author_email": null,
+    "python_version": "3.11"
 }

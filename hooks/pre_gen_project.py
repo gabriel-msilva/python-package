@@ -39,6 +39,13 @@ def validate_email(email: str) -> None:
         sys.exit(1)
 
 
+def validate_python_version(version: str) -> None:
+    if not re.match(r"^3\.\d+$", version):
+        print(f"ERROR: Invalid Python version '{version}'. Must be in format '3.X'.")
+        sys.exit(1)
+
+
 if __name__ == "__main__":
     validate_package_name("{{ cookiecutter.package_name }}")
     validate_email("{{ cookiecutter.author_email }}")
+    validate_python_version("{{ cookiecutter.python_version }}")
