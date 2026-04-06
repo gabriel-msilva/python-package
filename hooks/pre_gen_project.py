@@ -38,6 +38,7 @@ def validate_email(email: str) -> None:
         print(f"ERROR: Invalid email address '{email}'.")
         sys.exit(1)
 
+
 if __name__ == "__main__":
     validate_package_name("{{ cookiecutter.package_name }}")
     validate_email("{{ cookiecutter.author_email }}")
