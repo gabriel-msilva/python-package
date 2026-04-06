@@ -1,8 +1,8 @@
 import pytest
 
 from hooks.pre_gen_project import (
-    validate_package_name,
     validate_email,
+    validate_package_name,
     validate_python_version,
 )
 

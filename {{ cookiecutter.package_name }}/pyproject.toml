@@ -17,3 +17,11 @@ package-name = "{{ cookiecutter.import_name }}:main"
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 addopts = "-v"
+
+[tool.ruff.lint]
+extend-select = [
+    "A",   # flake8-builtins
+    "B",   # flake8-bugbear
+    "I",   # isort
+    "SIM", # flake8-simplify
+]
