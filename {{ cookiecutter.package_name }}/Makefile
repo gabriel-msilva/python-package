@@ -7,6 +7,10 @@ help: ## Show this help message
 
 .PHONY: setup
 setup: ## Install dependencies and pre-commit hooks
+ifeq (,$(wildcard uv.lock))
+	uv lock
+endif
+
 	uv sync --frozen
 	uv run pre-commit install
 
