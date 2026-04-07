@@ -3,6 +3,7 @@ name = "python-package"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
+license-files = ["LICENSE"]
 authors = [{ name = "Gabriel Mello Silva", email = "gabriel-melloc@proton.me" }]
 requires-python = ">=3.11"
 dependencies = ["cookiecutter>=2"]
