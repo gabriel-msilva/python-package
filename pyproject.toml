@@ -1,7 +1,7 @@
 [project]
 name = "python-package"
 version = "0.1.0"
-description = "Add your description here"
+description = "A cookiecutter template for Python packages"
 readme = "README.md"
 license-files = ["LICENSE"]
 authors = [{ name = "Gabriel Mello Silva", email = "gabriel-melloc@proton.me" }]
